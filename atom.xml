@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>myblog</title>
   
-  <subtitle>副标题</subtitle>
+  <subtitle>快乐每一天</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://nghqqa.github.io/"/>
