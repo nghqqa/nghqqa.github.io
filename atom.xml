@@ -2,11 +2,11 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title>欢迎光临</title>
   
-  <subtitle>https://nghqqa.github.io/</subtitle>
+  <subtitle>https://nghqqa.cn/</subtitle>
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.nghqqa.cn/"/>
-  <updated>2019-07-23T12:16:06.197Z</updated>
+  <updated>2019-07-25T07:47:21.862Z</updated>
   <id>www.nghqqa.cn/</id>
   
   <author>
@@ -17,89 +17,27 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>my-first-blog</title>
-    <link href="www.nghqqa.cn/2019/07/23/my-first-blog/"/>
-    <id>www.nghqqa.cn/2019/07/23/my-first-blog/</id>
-    <published>2019-07-23T08:50:44.000Z</published>
-    <updated>2019-07-23T12:16:06.197Z</updated>
+    <title>hadoop伪分布式安装</title>
+    <link href="www.nghqqa.cn/2019/07/25/hadoop%E4%BC%AA%E5%88%86%E5%B8%83%E5%BC%8F%E5%AE%89%E8%A3%85/"/>
+    <id>www.nghqqa.cn/2019/07/25/hadoop伪分布式安装/</id>
+    <published>2019-07-25T05:38:40.000Z</published>
+    <updated>2019-07-25T07:47:21.862Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>[TOC]</p><h1 id="一级标题"><a href="#一级标题" class="headerlink" title="一级标题"></a>一级标题</h1><h2 id="二级标题"><a href="#二级标题" class="headerlink" title="二级标题"></a>二级标题</h2><h3 id="三级标题"><a href="#三级标题" class="headerlink" title="三级标题"></a>三级标题</h3><p><u>这是下划线</u></p><p><del>这是删除线</del></p><p><strong>字体加粗</strong></p><p><em>倾斜</em></p><ul><li>牛奶</li><li>水果</li><li>面包<ul><li>味道可以</li></ul></li></ul><ol><li><p>你好</p></li><li><p>world</p><ol><li>电脑</li><li>鼠标</li></ol><blockquote><p>这是引用</p></blockquote><p><a href="https://www.jianshu.com/p/a6a6a22e9393" target="_blank" rel="noopener">这是一个链接</a></p></li></ol><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(string[]args)</span></span></span><br></pre></td></tr></table></figure><p>home family 我的 兔子</p><p><code>work</code></p><p>:love_hotel:</p><p>==高亮==</p><table><thead><tr><th></th><th></th><th></th></tr></thead><tbody><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr><tr><td></td><td></td><td></td></tr></tbody></table><hr><p>三级标题</p><p>job<a href="苹果创始人">^1</a></p><p>使用github pages服务搭建博客的好处有：</p><ol><li>全是静态文件，访问速度快；</li><li>免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；</li><li>可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；</li></ol><a id="more"></a><ol start="4"><li>数据绝对安全，基于github的版本管理，想恢复到哪个历史版本都行；</li><li>博客内容可以轻松打包、转移、发布到其它平台；</li><li>等等；</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。</p><p>hadoop集群分为3种模型</p><ol><li>单机模型：测试使用 </li><li>伪分布式模型：运行于单机 </li><li>完全分布式模型：适用于多台机器</li></ol><p>以下是使用的环境</p><table><thead><tr><th align="left">操作环境</th><th>主机名</th><th>IP地址</th><th>jdk</th><th align="center">hadoop版本</th><th></th></tr></thead><tbody><tr><td align="left">centos6.8</td><td>hadoop101</td><td>192.168.128.171</td><td>jdk1.8.0_191</td><td align="center">hadoop-2.7.2</td><td></td></tr><tr><td align="left"></td><td></td><td></td><td></td><td align="center"></td><td></td></tr></tbody></table><p>本文中使用的各种包，后续我会进行上传，以方便读者的使用</p><h1 id="安装hadoop"><a href="#安装hadoop" class="headerlink" title="安装hadoop"></a>安装hadoop</h1><h2 id="hadoop上传与解压"><a href="#hadoop上传与解压" class="headerlink" title="hadoop上传与解压"></a>hadoop上传与解压</h2><p>​    当我们配置好自己的虚拟机后，可以自行在网上下载xftp和xshell，来对于自己的虚拟机进行远程上传文件和远程操作，这两款软件对于学生而言都是免费的，大家可以自行在网站上下载，速度可能会有点慢。</p><p>​    当我们下载好这两款软件后，就可以将hadoop的解压包上传至自己的虚拟机上去，我们将解压包上传至/opt/software中，开始解压hadoop，将hadoop解压至/opt/module/中，同时建议将java也解压至/opt/module/中，方便后面的管理。</p><h3 id="配置环境变量"><a href="#配置环境变量" class="headerlink" title="配置环境变量"></a>配置环境变量</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vi /etc/profile</span><br></pre></td></tr></table></figure><p>具体配置</p><p>在/etc/profile的最后面加上，关于vi编辑器的用法可以自行百度一下，简单用法应该几分钟就能学会</p><p>export JAVA_HOME=/opt/module/jdk1.8.0_191<br>export PATH=$PATH:$JAVA_HOME/bin</p><p>export HADOOP_HOME=/opt/module/hadoop-2.7.2<br>export PATH=$PATH:$HADOOP_HOME/bin<br>export PATH=$PATH:$HADOOP_HOME/sbin</p><p>在配置环境变量完成后，记得要进行让它生效</p><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">source /etc/profile</span><br></pre></td></tr></table></figure><p>即可生效</p><p>可以输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop version</span><br></pre></td></tr></table></figure><p>如果成功则显示</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">Hadoop 2.7.2</span><br><span class="line">Subversion Unknown -r Unknown</span><br><span class="line">Compiled by root on 2017-05-22T10:49Z</span><br><span class="line">Compiled with protoc 2.5.0</span><br><span class="line">From source with checksum d0fda26633fa762bff87ec759ebe689c</span><br><span class="line">This command was run using /opt/module/hadoop-2.7.2/share/hadoop/common/hadoop-common-2.7.2.jar</span><br></pre></td></tr></table></figure><p>到这里hadoop就算是安装好了</p><h1 id="配置hadoop"><a href="#配置hadoop" class="headerlink" title="配置hadoop"></a>配置hadoop</h1><p>在伪分布式里我们只需要改三个配置文件core-site.xml和hdfs-site.xml还有hadoop-env.sh</p><p>这三个文件在hadoop目录下的etc/hadoop文件夹下</p><p><strong>core-site.xml文件包含了NameNode主机地址，监听端口等信息，对于这个伪分布式模型来说，我的主机地址为hadoo101，NameNode默认使用的端口为8020。</strong></p><p>修改core-site.xml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!-- 指定HDFS中NameNode的地址 --&gt;</span><br><span class="line">&lt;property&gt;</span><br><span class="line">        &lt;name&gt;fs.defaultFS&lt;/name&gt;</span><br><span class="line">    &lt;value&gt;hdfs://hadoop101:8020&lt;/value&gt;</span><br><span class="line">&lt;/property&gt;</span><br><span class="line">        &lt;!-- 指定hadoop运行时产生文件的存储目录 --&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;hadoop.tmp.dir&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;/opt/module/hadoop-2.7.2/data/tmp&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure><p><strong>hdfs-site.xml用于配置/HDFS的相关属性，例如数据块的副本参数，数据块的副本对于伪分布式来说应该为1</strong></p><p>修改hdfs-site.xml</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;configuration&gt;</span><br><span class="line">&lt;!-- 指定HDFS副本的数量 --&gt;</span><br><span class="line">        &lt;property&gt;</span><br><span class="line">                &lt;name&gt;dfs.replication&lt;/name&gt;</span><br><span class="line">                &lt;value&gt;1&lt;/value&gt;</span><br><span class="line">        &lt;/property&gt;</span><br><span class="line">&lt;/configuration&gt;</span><br></pre></td></tr></table></figure><p><strong>hadoop-env.sh 由于Hadoop是java进程，所以需要添加jdk</strong></p><p>修改hadoop-env.sh</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">export JAVA_HOME=/opt/module/jdk1.8.0_191</span><br></pre></td></tr></table></figure><p>对于伪分布式来说，改这三个配置文件够了。</p><p>在配置文件完成后，我们需要对hadoop进行初始化</p><p>在hadoop-2.7.2的目录下输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/hdfs namenode -format</span><br></pre></td></tr></table></figure><p>如果初始化成功的话，一个和下图相似</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/9c98NJ18De35.png?imageslim" alt="mark"></p><p>到这里hadoop的配置就已经完成了</p><h1 id="启动集群"><a href="#启动集群" class="headerlink" title="启动集群"></a>启动集群</h1><p>在hadoop-2.7.2目录下输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/start-dfs.sh</span><br></pre></td></tr></table></figure><p>启动dfs</p><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sbin/start-yarn.sh</span><br></pre></td></tr></table></figure><p>启动yarn节点</p><p>启动成功应该和下图相似</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/15Fa0e8qUDCR.png?imageslim" alt="mark"></p><p>到这里我们的集群就算是启动成功了</p><p>我们可以在web端查看HDFS文件系统</p><p><a href="http://192.168.128.171:50070/" target="_blank" rel="noopener">http://192.168.128.171:50070</a></p><p>192.168.128.171是我的ip地址，如果配置的不同，改一下即可</p><p>web端的hdfs文件系统如下图所示</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/fKgRPKMecBlX.png?imageslim" alt="mark"></p><h1 id="测试集群"><a href="#测试集群" class="headerlink" title="测试集群"></a>测试集群</h1><p>在HDFS文件系统上创建一个input文件夹</p><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -mkdir /input</span><br></pre></td></tr></table></figure><p>在web端应该可以看到</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/GK25hp1DN8GK.png?imageslim" alt="mark"></p><p>我们上传一个文件看看</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop fs -put LICENSE.txt /input</span><br></pre></td></tr></table></figure><p>LICENSE.txt是hadoop自带的一个TXT文件</p><p>如果上传成功在web端应该可以看到</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/C4OldlfJiDzs.png?imageslim" alt="mark"></p><p>这样就是上传成功了</p><p>我们在HDFS上跑一下MapReduce程序</p><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hadoop jar /opt/module/hadoop-2.7.2/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.2.jar wordcount /input/LICENSE.txt /output</span><br></pre></td></tr></table></figure><p>这里说明一下MapReduce要在启动yarn下运行</p><p>查看运行结果</p><p>在web端：</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/4wgLyU3syVSv.png?imageslim" alt="mark"></p><p>part-r-00000这个就是运行出来的结果</p><p>我们可以使用命令行查看结果也可以把这个文件下载到本地，这里我们使用命令行查看</p><p>输入</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">bin/hdfs dfs -cat /output/part-r-00000</span><br></pre></td></tr></table></figure><p>返回如下结果</p><p><img src="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/FHhHjKyLhTk9.png?imageslim" alt="mark"></p><p>到这里基本可以了，我们的hadoop已经安装配置好了，可以进行下一步的学习了</p><p>关于MapReduce的WordCount程序详解可以看这个</p><p><a href="https://blog.csdn.net/gulu_gulu_jp/article/details/51298164/" target="_blank" rel="noopener">https://blog.csdn.net/gulu_gulu_jp/article/details/51298164/</a></p><p>本次伪分布的配置就到这里了，如果还有问题可以向我留言，谢谢阅读，下次的文章应该是完全分布式的hadoop的安装教程了</p>]]></content>
     
     <summary type="html">
     
-      &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;[TOC]&lt;/p&gt;
-&lt;h1 id=&quot;一级标题&quot;&gt;&lt;a href=&quot;#一级标题&quot; class=&quot;headerlink&quot; title=&quot;一级标题&quot;&gt;&lt;/a&gt;一级标题&lt;/h1&gt;&lt;h2 id=&quot;二级标题&quot;&gt;&lt;a href=&quot;#二级标题&quot; class=&quot;headerlink&quot; title=&quot;二级标题&quot;&gt;&lt;/a&gt;二级标题&lt;/h2&gt;&lt;h3 id=&quot;三级标题&quot;&gt;&lt;a href=&quot;#三级标题&quot; class=&quot;headerlink&quot; title=&quot;三级标题&quot;&gt;&lt;/a&gt;三级标题&lt;/h3&gt;&lt;p&gt;&lt;u&gt;这是下划线&lt;/u&gt;&lt;/p&gt;
-&lt;p&gt;&lt;del&gt;这是删除线&lt;/del&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;字体加粗&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;倾斜&lt;/em&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;牛奶&lt;/li&gt;
-&lt;li&gt;水果&lt;/li&gt;
-&lt;li&gt;面包&lt;ul&gt;
-&lt;li&gt;味道可以&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;p&gt;你好&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;&lt;p&gt;world&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;电脑&lt;/li&gt;
-&lt;li&gt;鼠标&lt;/li&gt;
-&lt;/ol&gt;
-&lt;blockquote&gt;
-&lt;p&gt;这是引用&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;a href=&quot;https://www.jianshu.com/p/a6a6a22e9393&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;这是一个链接&lt;/a&gt;&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;figure class=&quot;highlight java&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;&lt;span class=&quot;function&quot;&gt;&lt;span class=&quot;keyword&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;static&lt;/span&gt; &lt;span class=&quot;keyword&quot;&gt;void&lt;/span&gt; &lt;span class=&quot;title&quot;&gt;main&lt;/span&gt;&lt;span class=&quot;params&quot;&gt;(string[]args)&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-
-&lt;p&gt;home family 我的 兔子&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;work&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;:love_hotel:&lt;/p&gt;
-&lt;p&gt;==高亮==&lt;/p&gt;
-&lt;table&gt;
-&lt;thead&gt;
-&lt;tr&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;th&gt;&lt;/th&gt;
-&lt;/tr&gt;
-&lt;/thead&gt;
-&lt;tbody&gt;&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;tr&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;td&gt;&lt;/td&gt;
-&lt;/tr&gt;
-&lt;/tbody&gt;&lt;/table&gt;
-&lt;hr&gt;
-&lt;p&gt;三级标题&lt;/p&gt;
-&lt;p&gt;job&lt;a href=&quot;苹果创始人&quot;&gt;^1&lt;/a&gt;&lt;/p&gt;
-&lt;p&gt;使用github pages服务搭建博客的好处有：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;全是静态文件，访问速度快；&lt;/li&gt;
-&lt;li&gt;免费方便，不用花一分钱就可以搭建一个自由的个人博客，不需要服务器不需要后台；&lt;/li&gt;
-&lt;li&gt;可以随意绑定自己的域名，不仔细看的话根本看不出来你的网站是基于github的；&lt;/li&gt;
-&lt;/ol&gt;
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装
+      
     
     </summary>
     
+      <category term="搭建自己的hadoop学习集群" scheme="www.nghqqa.cn/categories/%E6%90%AD%E5%BB%BA%E8%87%AA%E5%B7%B1%E7%9A%84hadoop%E5%AD%A6%E4%B9%A0%E9%9B%86%E7%BE%A4/"/>
     
-      <category term="Hexo" scheme="www.nghqqa.cn/tags/Hexo/"/>
     
-      <category term="Markdown" scheme="www.nghqqa.cn/tags/Markdown/"/>
+      <category term="-hadoop" scheme="www.nghqqa.cn/tags/hadoop/"/>
     
   </entry>
   
