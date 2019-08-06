@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.nghqqa.cn/"/>
-  <updated>2019-07-25T13:26:07.452Z</updated>
+  <updated>2019-08-06T11:37:21.155Z</updated>
   <id>www.nghqqa.cn/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Linux学习</title>
+    <link href="www.nghqqa.cn/2019/08/06/Linux%E5%AD%A6%E4%B9%A0/"/>
+    <id>www.nghqqa.cn/2019/08/06/Linux学习/</id>
+    <published>2019-08-06T11:28:07.000Z</published>
+    <updated>2019-08-06T11:37:21.155Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>对于之前写的hadoop伪分布式的安装文章，可能对一些没有Linux基础的读者来说有一些的难度，所以建议大家先了解Linux的一些基础知识在来看之前的文章，可能就会觉得很简单了</p><h2 id="学习建议"><a href="#学习建议" class="headerlink" title="学习建议"></a>学习建议</h2><p>我个人是比较推荐大家可以去b站看看韩顺平老师的Linux教程，可以在b站直接找到，这里放出b站链接</p><p><a href="https://www.bilibili.com/video/av21303002?from=search&amp;seid=3872508779266125537" target="_blank" rel="noopener">https://www.bilibili.com/video/av21303002?from=search&amp;seid=3872508779266125537</a></p><p>视频是18年上传的，但是知识是不会过时的，当然如果大家不想那么系统的了解Linux的话，可以去看看这个老哥的博客文章，这里放出链接</p><p><a href="https://blog.csdn.net/weixin_41710054/article/details/89081599#22_vivim_19" target="_blank" rel="noopener">https://blog.csdn.net/weixin_41710054/article/details/89081599#22_vivim_19</a></p><p>这个文章写的比较的细，基本不知道的命令或者是快捷键都可以去文章中看看，自己看文章学习，可以比看视频省下不少时间，里面的命令可以基本满足正常操作Linux系统的要求。</p><p>好的，本次Linux的学习建议就到这里了，希望大家生活愉快。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;对于之前写的hadoop伪分布式的安装文章，可能对一些没有Linux基础的读者来说有一些的难度，所以建议大家先了解Linux的一些基础知识在
+      
+    
+    </summary>
+    
+      <category term="自己学习Linux" scheme="www.nghqqa.cn/categories/%E8%87%AA%E5%B7%B1%E5%AD%A6%E4%B9%A0Linux/"/>
+    
+    
+      <category term="Linux" scheme="www.nghqqa.cn/tags/Linux/"/>
+    
+  </entry>
   
   <entry>
     <title>hadoop伪分布式安装</title>
