@@ -119,6 +119,8 @@
 <meta property="og:site_name" content="欢迎光临">
 <meta property="og:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 使用环境下面是本次搭建使用的环境    操作环境 主机名 IP地址">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/lihMS1cmJ5ds.png?imageslim">
+<meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/628Xq2EJFY3r.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/6mobrzRqbbHQ.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/vzbBoY0iVkob.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/cbqc8daw1Izy.png?imageslim">
@@ -126,11 +128,11 @@
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/djEjODwXsuF8.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/tVfrEHmhKgeh.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/CFi7BSr2G8Ws.png?imageslim">
-<meta property="og:updated_time" content="2019-08-11T09:40:38.578Z">
+<meta property="og:updated_time" content="2019-08-11T10:35:54.718Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop完全分布式安装">
 <meta name="twitter:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 使用环境下面是本次搭建使用的环境    操作环境 主机名 IP地址">
-<meta name="twitter:image" content="http://qqa.nghqqa.cn/blog/20190811/6mobrzRqbbHQ.png?imageslim">
+<meta name="twitter:image" content="http://qqa.nghqqa.cn/blog/20190811/lihMS1cmJ5ds.png?imageslim">
 
 
 
@@ -441,7 +443,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-11 17:40:38" itemprop="dateModified" datetime="2019-08-11T17:40:38+08:00">2019-08-11</time>
+                <time title="修改时间：2019-08-11 18:35:54" itemprop="dateModified" datetime="2019-08-11T18:35:54+08:00">2019-08-11</time>
               </span>
             
           
@@ -558,8 +560,15 @@
 
 <p>可以进入虚拟机的网卡配置</p>
 <p>我们需要修改虚拟机的网卡默认配置，将我们的虚拟机的网卡配置设置为静态ip</p>
-<p>修改配置可以如图所示</p>
+<p>ip地址 根据 VMware 虚拟网络进行相关配置 如图</p>
+<p><img src="http://qqa.nghqqa.cn/blog/20190811/lihMS1cmJ5ds.png?imageslim" alt="mark"></p>
+<p><img src="http://qqa.nghqqa.cn/blog/20190811/628Xq2EJFY3r.png?imageslim" alt="mark"></p>
+<p>在虚拟机里修改配置可以如图所示</p>
 <p><img src="http://qqa.nghqqa.cn/blog/20190811/6mobrzRqbbHQ.png?imageslim" alt="mark"></p>
+<p>修改完输入</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">service network restart</span><br></pre></td></tr></table></figure>
+
+<p>重启网络服务</p>
 <p>对其他两个hadoop节点也同样做上述操作，只不过在IPADDR值不一样，分别填其节点对应的ip</p>
 <h3 id="2-修改节点主机名，并且添加各节点映射"><a href="#2-修改节点主机名，并且添加各节点映射" class="headerlink" title="2.修改节点主机名，并且添加各节点映射"></a>2.修改节点主机名，并且添加各节点映射</h3><p>在命令行中输入</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">vim /etc//sysconfig/network</span><br></pre></td></tr></table></figure>
@@ -960,7 +969,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">9k</span>
+    <span title="站点总字数">10k</span>
   
 
   
