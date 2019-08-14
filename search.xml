@@ -1,9 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用的hadoop相关安装包]]></title>
+    <url>%2F2019%2F08%2F14%2F%E4%BD%BF%E7%94%A8%E7%9A%84hadoop%E7%9B%B8%E5%85%B3%E5%AE%89%E8%A3%85%E5%8C%85%2F</url>
+    <content type="text"><![CDATA[前言这里放一些之前安装用到的安装包 链接：https://pan.baidu.com/s/1_qp_AKhRJNvzr6P63nJ9Rw提取码：7s9n复制这段内容后打开百度网盘手机App，操作更方便哦 hadoop spark hive scala 2.7.2 spark-2.4.0 hive-1.1.0 scala-2.11.4]]></content>
+      <categories>
+        <category>相关安装包</category>
+      </categories>
+      <tags>
+        <tag>hadoop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[scala的安装]]></title>
     <url>%2F2019%2F08%2F13%2Fscala%E7%9A%84%E5%AE%89%E8%A3%85%2F</url>
-    <content type="text"><![CDATA[前言之前写的spark的安装中忘记说明安装spark要先安装scala，因为spark的底层是使用scala脚本语言开发 使用版本 scala-2.11.4 安装spark上传解压sparkspark的压缩包上传到我们的/opt/software上解压到的/opt/module/ 代码如下 1tar -zxf scala-2.11.4.tgz -C /opt/module/ 配置环境变量1vim /etc/profile 在末尾添加 123#scalaexport SCALA_HOME=/opt/module/scala-2.11.4export PATH=$PATH:$SCALA_HOME/bin 记得保存使其生效 1source /etc/profile 验证输入 1scala -version 出现 1Scala code runner version 2.11.4 -- Copyright 2002-2013, LAMP/EPFL 则代表安装完成 之后在其他两个节点中重复上述步骤！ 安装scala到这里也就完成，一定要安装完scala后去安装spark，谢谢大家的阅读。]]></content>
+    <content type="text"><![CDATA[前言之前写的spark的安装中忘记说明安装spark要先安装scala，因为spark的底层是使用scala脚本语言开发 使用版本 scala-2.11.4 安装spark上传解压sparkspark的压缩包上传到我们的/opt/software上，解压到/opt/module/ 代码如下 1tar -zxf scala-2.11.4.tgz -C /opt/module/ 配置环境变量1vim /etc/profile 在末尾添加 123#scalaexport SCALA_HOME=/opt/module/scala-2.11.4export PATH=$PATH:$SCALA_HOME/bin 记得保存使其生效 1source /etc/profile 验证输入 1scala -version 出现 1Scala code runner version 2.11.4 -- Copyright 2002-2013, LAMP/EPFL 则代表安装完成 之后在其他两个节点中重复上述步骤！ 安装scala到这里也就完成，一定要安装完scala后去安装spark，谢谢大家的阅读。]]></content>
       <categories>
         <category>搭建自己的hadoop学习集群</category>
       </categories>
