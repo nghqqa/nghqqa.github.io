@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="www.nghqqa.cn/"/>
-  <updated>2019-08-14T05:38:46.201Z</updated>
+  <updated>2019-08-14T12:16:32.357Z</updated>
   <id>www.nghqqa.cn/</id>
   
   <author>
@@ -21,9 +21,9 @@
     <link href="www.nghqqa.cn/2019/08/14/%E4%BD%BF%E7%94%A8%E7%9A%84hadoop%E7%9B%B8%E5%85%B3%E5%AE%89%E8%A3%85%E5%8C%85/"/>
     <id>www.nghqqa.cn/2019/08/14/使用的hadoop相关安装包/</id>
     <published>2019-08-14T05:29:40.000Z</published>
-    <updated>2019-08-14T05:38:46.201Z</updated>
+    <updated>2019-08-14T12:16:32.357Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这里放一些之前安装用到的安装包</p><p>链接：<a href="https://pan.baidu.com/s/1_qp_AKhRJNvzr6P63nJ9Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1_qp_AKhRJNvzr6P63nJ9Rw</a><br>提取码：7s9n<br>复制这段内容后打开百度网盘手机App，操作更方便哦</p><table><thead><tr><th>hadoop</th><th>spark</th><th>hive</th><th>scala</th></tr></thead><tbody><tr><td>2.7.2</td><td>spark-2.4.0</td><td>hive-1.1.0</td><td>scala-2.11.4</td></tr></tbody></table>]]></content>
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>这里放一些之前安装用到的安装包</p><p>链接：<a href="https://pan.baidu.com/s/1_qp_AKhRJNvzr6P63nJ9Rw" target="_blank" rel="noopener">https://pan.baidu.com/s/1_qp_AKhRJNvzr6P63nJ9Rw</a><br>提取码：7s9n </p><table><thead><tr><th>hadoop</th><th>spark</th><th>hive</th><th>scala</th></tr></thead><tbody><tr><td>2.7.2</td><td>spark-2.4.0</td><td>hive-1.1.0</td><td>scala-2.11.4</td></tr></tbody></table>]]></content>
     
     <summary type="html">
     
