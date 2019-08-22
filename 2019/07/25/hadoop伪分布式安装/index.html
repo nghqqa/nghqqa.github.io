@@ -111,13 +111,13 @@
   </script>
 
 
-  <meta name="description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。 hadoop集群分为3种模型  单机模型：测试使用  伪分布式模型：运行于单机  完全分布式模型：适用于多台机器  以下是使用的环境    操作环境 主机名 IP地址 jdk hadoop版本     centos6.8 hadoo">
+  <meta name="description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。">
 <meta name="keywords" content="hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hadoop伪分布式安装">
 <meta property="og:url" content="www.nghqqa.cn/2019/07/25/hadoop伪分布式安装/index.html">
 <meta property="og:site_name" content="欢迎光临">
-<meta property="og:description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。 hadoop集群分为3种模型  单机模型：测试使用  伪分布式模型：运行于单机  完全分布式模型：适用于多台机器  以下是使用的环境    操作环境 主机名 IP地址 jdk hadoop版本     centos6.8 hadoo">
+<meta property="og:description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/9c98NJ18De35.png?imageslim">
 <meta property="og:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/15Fa0e8qUDCR.png?imageslim">
@@ -126,10 +126,10 @@
 <meta property="og:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/C4OldlfJiDzs.png?imageslim">
 <meta property="og:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/4wgLyU3syVSv.png?imageslim">
 <meta property="og:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/FHhHjKyLhTk9.png?imageslim">
-<meta property="og:updated_time" content="2019-08-11T08:47:11.572Z">
+<meta property="og:updated_time" content="2019-08-22T04:31:24.460Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop伪分布式安装">
-<meta name="twitter:description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。 hadoop集群分为3种模型  单机模型：测试使用  伪分布式模型：运行于单机  完全分布式模型：适用于多台机器  以下是使用的环境    操作环境 主机名 IP地址 jdk hadoop版本     centos6.8 hadoo">
+<meta name="twitter:description" content="前言本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。">
 <meta name="twitter:image" content="http://pv4lxcno2.bkt.clouddn.com/blog/20190725/9c98NJ18De35.png?imageslim">
 
 
@@ -441,7 +441,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-11 16:47:11" itemprop="dateModified" datetime="2019-08-11T16:47:11+08:00">2019-08-11</time>
+                <time title="修改时间：2019-08-22 12:31:24" itemprop="dateModified" datetime="2019-08-22T12:31:24+08:00">2019-08-22</time>
               </span>
             
           
@@ -514,6 +514,8 @@
 
       
         <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文介绍的主要是Hadoop的伪分布式的搭建以及遇到的相关问题的解决，做一下记录，jdk的安装这里就不做太多的介绍了，相信大家根据网上的安装介绍很快就能安装成功。</p>
+ <a id="more"></a>
+
 <p>hadoop集群分为3种模型</p>
 <ol>
 <li>单机模型：测试使用 </li>
@@ -689,10 +691,6 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/07/22/hello-world/" rel="next" title="Hello World">
-                <i class="fa fa-chevron-left"></i> Hello World
-              </a>
-            
           </div>
 
           <span class="post-nav-divider"></span>
@@ -777,7 +775,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -938,7 +936,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">26k</span>
   
 
   

@@ -111,13 +111,13 @@
   </script>
 
 
-  <meta name="description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 使用环境下面是本次搭建使用的环境    操作环境 主机名 IP地址">
+  <meta name="description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。">
 <meta name="keywords" content="hadoop">
 <meta property="og:type" content="article">
 <meta property="og:title" content="hadoop完全分布式安装">
 <meta property="og:url" content="www.nghqqa.cn/2019/08/10/hadoop完全分布式安装/index.html">
 <meta property="og:site_name" content="欢迎光临">
-<meta property="og:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 使用环境下面是本次搭建使用的环境    操作环境 主机名 IP地址">
+<meta property="og:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。">
 <meta property="og:locale" content="zh-CN">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/lihMS1cmJ5ds.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/628Xq2EJFY3r.png?imageslim">
@@ -128,10 +128,10 @@
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/djEjODwXsuF8.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/tVfrEHmhKgeh.png?imageslim">
 <meta property="og:image" content="http://qqa.nghqqa.cn/blog/20190811/CFi7BSr2G8Ws.png?imageslim">
-<meta property="og:updated_time" content="2019-08-13T05:47:03.573Z">
+<meta property="og:updated_time" content="2019-08-22T04:31:17.940Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hadoop完全分布式安装">
-<meta name="twitter:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 使用环境下面是本次搭建使用的环境    操作环境 主机名 IP地址">
+<meta name="twitter:description" content="前言我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。">
 <meta name="twitter:image" content="http://qqa.nghqqa.cn/blog/20190811/lihMS1cmJ5ds.png?imageslim">
 
 
@@ -443,7 +443,7 @@
                 
                   <span class="post-meta-item-text">更新于</span>
                 
-                <time title="修改时间：2019-08-13 13:47:03" itemprop="dateModified" datetime="2019-08-13T13:47:03+08:00">2019-08-13</time>
+                <time title="修改时间：2019-08-22 12:31:17" itemprop="dateModified" datetime="2019-08-22T12:31:17+08:00">2019-08-22</time>
               </span>
             
           
@@ -515,7 +515,11 @@
       
 
       
-        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。</p>
+        <h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>我们之前搭建了hadoop的伪分布式的集群，伪分布式的集群对于学习一些基础的hadoop操作是足够的，但是当你涉及到更复杂的操作时，伪分布式就不够了，完全分布式的性能比伪分布的要强，而且完全分布式可操作性也更高，与此同时完全分布式对于电脑的配置也要求更高，完全分布式一般需要3台虚拟机来完成,下面我们开始搭建自己的完全分布式。 </p>
+<a id="more"></a>
+
+
+
 <h2 id="使用环境"><a href="#使用环境" class="headerlink" title="使用环境"></a>使用环境</h2><p>下面是本次搭建使用的环境</p>
 <table>
 <thead>
@@ -818,7 +822,7 @@
                 
                   <a href="/archives/">
                 
-                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-count">8</span>
                     <span class="site-state-item-name">日志</span>
                   </a>
                 </div>
@@ -979,7 +983,7 @@
       <i class="fa fa-area-chart"></i>
     </span>
     
-    <span title="站点总字数">27k</span>
+    <span title="站点总字数">26k</span>
   
 
   
